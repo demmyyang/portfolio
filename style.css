@@ -21,6 +21,7 @@ nav {
     font-family: "Work Sans", sans-serif;
     background-color: var(--background);
     margin-top: 8px;
+    z-index: 999;
 }
 
 .logo {
@@ -38,6 +39,7 @@ nav {
     text-decoration: none;
     opacity: 0.9;
     margin-bottom: 12px;
+    z-index: 999;
 }
 
 .nav-container li {
@@ -221,13 +223,11 @@ nav {
 .gallery_img:hover, .retriever_gallery:hover, .sports_gallery:hover,.hotel_fullerton_gallery:hover, .USDA_gallery:hover, .mom_gallery:hover, .hearts_bones_gallery:hover{
     transform: translateY(-10px);
     transition: transform 0.2s ease-in;
-    z-index: -100px;
 }
 
 .gallery_img:hover {
     transform: translateY(-10px);
     transition: transform 0.2s ease-in;
-    z-index: -100px;
     transition: all 0.2s ease-in;
 }
 
