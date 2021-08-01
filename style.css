@@ -17,6 +17,7 @@ nav {
     min-height: 8vh;
     font-family: "Roboto Mono", sans-serif;
     background-color: var(--background);
+    margin-top: 8px;
 }
 
 .logo {
@@ -30,7 +31,7 @@ nav {
     display: flex;
     background-color: var(--background);
     justify-content: space-around;
-    width: 20%;
+    width: 28%;
     text-decoration: none;
 }
 
@@ -50,7 +51,7 @@ nav {
     position: relative;
     padding-left: 4px;
     padding-right: 0px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .nav-links::after {
@@ -90,14 +91,16 @@ nav {
 
 .gallery_img {
     width: 100%;
+    padding-top: 8px;
+    padding-bottom: 30px;
 }
 
 .grid {
     margin-top: 90px;
     display: grid;
     grid-template-columns: auto 25% 25% 25% auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 5vh;
+    grid-template-rows: 1fr 1fr 5%;
+    grid-gap: 2vw;
 
 }
 .retriever_gallery {
@@ -126,20 +129,25 @@ nav {
 }
 .footer {
     grid-column: 2 / 5;
-    grid-row: 4;
+    grid-row: 3;
 }
 
+.gallery_img:hover, .retriever_gallery:hover, .sports_gallery:hover,.hotel_fullerton_gallery:hover, .USDA_gallery:hover, .mom_gallery:hover, .hearts_bones_gallery:hover{
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in;
+    opacity: 0.7;
+}
 
-@media screen and (max-width:1020px) {
+@media screen and (max-width:1050px) {
     .nav-container {
-        width: 35%;
+        width: 30%;
     }
     .grid {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: auto 35% 35% auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
+        grid-template-columns: auto 38% 38% auto;
+        grid-template-rows: 1fr 1fr 1fr 5%;
+        grid-gap: 2vw;
     }
     .retriever_gallery {
         grid-column: 2 / 3;
@@ -167,7 +175,7 @@ nav {
     }
     .footer {
         grid-column: 2 / 4;
-        grid-row: 5;
+        grid-row: 4;
     }
 }
 
@@ -184,7 +192,7 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 23%;
+        width: 25%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -199,10 +207,10 @@ nav {
 
 @media screen and (max-width:700px){
     .grid {
-        margin-top: 50px;
+        margin-top: 10px;
         display: grid;
         grid-template-columns: auto 60% auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 5%;
         grid-gap: 10px;
     }
     .retriever_gallery {
@@ -231,7 +239,7 @@ nav {
     }
     .footer {
         grid-column: 2;
-        grid-row: 8;
+        grid-row: 7;
     }
 }
 
@@ -269,8 +277,8 @@ nav {
     left: 0;
     position: fixed;
     top: 0;
-    transition: opacity 1.7s linear;
-    transition: opacity .7s linear;
+    transition: opacity 1s linear;
+    transition: opacity 1.2s linear;
     width: 100%;
     z-index: 9999;
     pointer-events: none;
