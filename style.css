@@ -76,7 +76,6 @@ nav {
     font-weight: bold;
 }
 
-
 .burger {
     display: none;
 }
@@ -89,63 +88,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width:1024px) {
-    .nav-container {
-        width: 33%;
-    }
-}
-
-@media screen and (max-width:736px){
-    body {
-        overflow-x: hidden;
-    }
-    .nav-container {
-        position: absolute;
-        right: 0px;
-        height: 18vh;
-        top: 8vh;
-        background-color: var(--background);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 25%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .nav-container li {
-        opacity: 0;
-    }
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-}
-
-.nav-active {
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px,5px);
-}
-.toggle .line2 {
-    opacity: 0;
-}
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px,-5px);
-}
-
 .grid {
     margin-top: 50px;
     display: grid;
@@ -153,51 +95,29 @@ nav {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 }
-
 .retriever_gallery {
     grid-column: 2 / 3;
 }
-
 .sports_gallery {
     grid-column: 3 / 4;
 }
-
 .hotel_fullerton_gallery {
     grid-column: 4 / 5;
 }
-
 .USDA_gallery {
     grid-column: 2 / 3;
 }
-
 .mom_gallery {
     grid-column: 3 / 4;
 }
-
 .hearts_bones_gallery {
     grid-column: 4 / 5;
 }
-
 .footer {
     grid-column: 2 / 5;
     grid-row: 4;
 }
 
-.preloader {
-    align-items: center;
-    background: black;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    left: 0;
-    position: fixed;
-    top: 0;
-    transition: opacity 1.9s linear;
-    transition: opacity .7s linear;
-    width: 100%;
-    z-index: 9999;
-    pointer-events: none;
-}
 
 @media screen and (max-width:1024px) {
     .nav-container {
@@ -205,34 +125,11 @@ nav {
     }
 }
 
-@media screen and (max-width:850px){
-    body {
-        overflow-x: hidden;
-    }
-    .nav-container {
-        position: absolute;
-        right: 0px;
-        height: 18vh;
-        top: 8vh;
-        background-color: var(--background);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 25%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .nav-container li {
-        opacity: 0;
-    }
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
+@media screen and (max-width:830px){
     .grid {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: 5% 45% 45% 5%;
+        grid-template-columns: 10% 40% 40% 10%;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
     }
@@ -257,6 +154,29 @@ nav {
     .footer {
         grid-column: 2 / 4;
         grid-row: 5;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .nav-container {
+        position: absolute;
+        right: 0px;
+        height: 18vh;
+        top: 8vh;
+        background-color: var(--background);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-container li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
     }
 }
 
@@ -289,5 +209,46 @@ nav {
     .footer {
         grid-column: 2;
         grid-row: 8;
+    } 
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
     }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-5px);
+}
+
+.preloader {
+    align-items: center;
+    background: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1.7s linear;
+    transition: opacity .7s linear;
+    width: 100%;
+    z-index: 9999;
+    pointer-events: none;
 }
