@@ -30,7 +30,7 @@ nav {
     display: flex;
     background-color: var(--background);
     justify-content: space-around;
-    width: 30%;
+    width: 20%;
     text-decoration: none;
 }
 
@@ -88,30 +88,41 @@ nav {
     transition: all 0.3s ease;
 }
 
+.gallery_img {
+    width: 100%;
+}
+
 .grid {
-    margin-top: 50px;
+    margin-top: 90px;
     display: grid;
-    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-columns: auto 25% 25% 25% auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5vh;
+
 }
 .retriever_gallery {
     grid-column: 2 / 3;
+    width: 90%;
 }
 .sports_gallery {
     grid-column: 3 / 4;
+    width: 90%;
 }
 .hotel_fullerton_gallery {
     grid-column: 4 / 5;
+    width: 90%;
 }
 .USDA_gallery {
     grid-column: 2 / 3;
+    width:90%
 }
 .mom_gallery {
     grid-column: 3 / 4;
+    width: 90%;
 }
 .hearts_bones_gallery {
     grid-column: 4 / 5;
+    width: 90%;
 }
 .footer {
     grid-column: 2 / 5;
@@ -119,42 +130,48 @@ nav {
 }
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1020px) {
     .nav-container {
-        width: 33%;
+        width: 35%;
     }
-}
-
-@media screen and (max-width:830px){
     .grid {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-columns: auto 35% 35% auto;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
     }
     .retriever_gallery {
         grid-column: 2 / 3;
+        width: 90%;
     }
     .sports_gallery {
         grid-column: 3 / 4;
+        width: 90%;
     }
     .hotel_fullerton_gallery {
         grid-column: 2 / 3;
+        width: 90%;
     }
     .USDA_gallery {
         grid-column: 3 / 4;
+        width: 90%;
     }
     .mom_gallery {
         grid-column: 2 / 3;
+        width: 90%;
     }
     .hearts_bones_gallery {
         grid-column: 3 / 4;
+        width: 90%;
     }
     .footer {
         grid-column: 2 / 4;
         grid-row: 5;
     }
+}
+
+@media screen and (max-width:900px){
     body {
         overflow-x: hidden;
     }
@@ -167,7 +184,7 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 25%;
+        width: 23%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -180,36 +197,42 @@ nav {
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
     .grid {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: 10% 80% 10%;
+        grid-template-columns: auto 60% auto;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
     }
     .retriever_gallery {
         grid-column: 2;
+        width: 90%
     }
     .sports_gallery {
         grid-column: 2;
+        width: 90%
     }
     .hotel_fullerton_gallery {
         grid-column: 2;
+        width: 90%
     }
     .USDA_gallery {
         grid-column: 2;
+        width: 90%
     }
     .mom_gallery {
         grid-column: 2;
+        width: 90%
     }
     .hearts_bones_gallery {
         grid-column: 2;
+        width: 90%
     }
     .footer {
         grid-column: 2;
         grid-row: 8;
-    } 
+    }
 }
 
 .nav-active {
