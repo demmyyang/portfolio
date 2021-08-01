@@ -2,20 +2,134 @@
     margin: 0px auto;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #edf0f1;
-    font-family: 'Inter', sans-serif;
+    background-color: #E0E0E0;
+}
+
+:root {
+    --background: #E0E0E0;
+    --black: #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: "inter", sans-serif;
+    background-color: var(--background);
+}
+
+.logo {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    background-color: var(--background);
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 26px;
+    height: 2px;
+    background-color: var(--black);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 20vh;
+        top: 8vh;
+        background-color: var(--background);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-5px);
 }
 
 .preloader {
-   align-items: center;
-   background: black;
-   display: flex;
-   height: 100vh;
-   justify-content: center;
-   left: 0;
-   position: fixed;
-   top: 0;
-   transition: opacity 0.4s linear;
-   width: 100%;
-   z-index: 9999;
+    align-items: center;
+    background: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity .7s linear;
+    transition: opacity .7s linear;
+    width: 100%;
+    z-index: 9999;
+    pointer-events: none;
 }
