@@ -15,7 +15,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    font-family: "Roboto Mono", sans-serif;
+    font-family: "Work Sans", sans-serif;
     background-color: var(--background);
     margin-top: 8px;
 }
@@ -49,8 +49,9 @@ nav {
 
 .nav-links {
     position: relative;
-    padding-left: 4px;
+    padding-left: 3px;
     padding-right: 0px;
+    padding-bottom: 1px;
     margin-top: 10px;
 }
 
