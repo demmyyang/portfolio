@@ -145,19 +145,3 @@ nav {
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-5px);
 }
-
-.preloader {
-    align-items: center;
-    background: black;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    left: 0;
-    position: fixed;
-    top: 0;
-    transition: opacity 1.7s linear;
-    transition: opacity .7s linear;
-    width: 100%;
-    z-index: 9999;
-    pointer-events: none;
-}
