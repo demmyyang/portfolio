@@ -4,8 +4,11 @@
 	 viewBox="0 0 162 82.3" style="enable-background:new 0 0 162 82.3;" xml:space="preserve">
 <style type="text/css">
 	.st0{font-family:'CarlBrown';}
-	.st1{font-size:28.0899px;}
+	.st1{font-size:33.4755px;}
+	.st2{font-size:42.8668px;}
 </style>
-<text transform="matrix(0.9975 0 0 1 3.2067 46.4561)" class="st0 st1">sports</text>
-<text transform="matrix(0.9975 0 0 1 3.2067 75.5811)" class="st0 st1">network</text>
+<g>
+	<text transform="matrix(0.9975 0 0 1 2.3267 79.9937)" class="st0 st1">network</text>
+	<text transform="matrix(0.9975 0 0 1 1.9438 49.5533)" class="st0 st2">sports</text>
+</g>
 </svg>
