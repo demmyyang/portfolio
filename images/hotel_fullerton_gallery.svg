@@ -3,9 +3,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 162 86.7" style="enable-background:new 0 0 162 86.7;" xml:space="preserve">
 <style type="text/css">
-	.st0{font-family:'CarlBrown';}
-	.st1{font-size:31.3871px;}
+	.st0{fill:#2B2B2B;}
+	.st1{font-family:'CarlBrown';}
+	.st2{font-size:24.6954px;}
 </style>
-<text transform="matrix(1.0016 0 0 1 4.106 40.2759)" class="st0 st1">the hotel</text>
-<text transform="matrix(1.0016 0 0 1 -0.4058 72.8184)" class="st0 st1">fullerton</text>
+<text transform="matrix(1.0016 0 0 1 1.0059 53.6091)" class="st0 st1 st2">the hotel</text>
+<text transform="matrix(1.0016 0 0 1 2.9155 77.8704)" class="st0 st1 st2"> fullerton</text>
 </svg>

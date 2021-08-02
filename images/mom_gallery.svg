@@ -3,9 +3,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 162 88.6" style="enable-background:new 0 0 162 88.6;" xml:space="preserve">
 <style type="text/css">
-	.st0{font-family:'CarlBrown';}
-	.st1{font-size:29.7817px;}
+	.st0{fill:#2B2B2B;}
+	.st1{font-family:'CarlBrown';}
+	.st2{font-size:29.7817px;}
 </style>
-<text transform="matrix(1.0016 0 0 1 -1.904297e-02 44.8571)" class="st0 st1">move over</text>
-<text transform="matrix(1.0016 0 0 1 20.8018 75.7317)" class="st0 st1">mozart</text>
+<text transform="matrix(1.0016 0 0 1 -1.904297e-02 44.8571)" class="st0 st1 st2">move over</text>
+<text transform="matrix(1.0016 0 0 1 20.8018 75.7317)" class="st0 st1 st2">mozart</text>
 </svg>
