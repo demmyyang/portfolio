@@ -9,7 +9,9 @@
     --background: #E0E0E0;
     --slate: #2b2b2b;
     --retriever: #e9635c;
-    --usda: #e75f0a;
+    --usda: #fa6000;
+    --gray: #424242;
+    --preloaderbg: #191919;
 }
 
 
@@ -37,7 +39,7 @@ nav {
     display: flex;
     background-color: var(--background);
     justify-content: space-around;
-    width: 28%;
+    width: 30%;
     text-decoration: none;
     opacity: 0.9;
     margin-bottom: 12px;
@@ -61,7 +63,7 @@ nav {
     padding-left: 3px;
     padding-right: 0px;
     padding-bottom: 1px;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
 /*--------HEADER (HOVER EFFECTS)--------*/
@@ -113,11 +115,11 @@ nav {
 }
 
 .grid {
-    margin-top: 40px;
+    margin-top: 88px;
     display: grid;
-    grid-template-columns: auto 25% 25% 25% auto;
+    grid-template-columns: auto 24% 24% 24% auto;
     grid-template-rows: 1fr 1fr 6%;
-    grid-gap: 30px;
+    grid-gap: 33px;
 }
 
 /*--------RETRIEVER GRID--------*/
@@ -146,17 +148,19 @@ nav {
     opacity: 0;
 }
 .retriever_title {
-    font-size: 1.8em;
+    font-size: 1.7em;
     font-weight: bold;
-    margin-top: 3.6em;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 .retriever_description {
     font-size: 0.9em;
     margin-top: 0.8em;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: var(--gray);
 }   
 .view_project {
     font-size: 1em;
@@ -166,7 +170,7 @@ nav {
     margin-right: 30px;
 }
 .retriever_overlay:hover {
-    opacity: .88;
+    opacity: .9;
     transition: opacity 0.3s ease-in;
 }
 .retriever_overlay::after {
@@ -181,7 +185,7 @@ nav {
 
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.6s ease-in;
+    transition: transform 0.5s ease-in;
 }
 .retriever_overlay:hover::after {
     transform: scaleX(1);
@@ -228,17 +232,19 @@ nav {
     opacity: 0;
 }
 .usda_title {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
-    margin-top: 3.6em;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 .usda_description {
     font-size: 0.9em;
     margin-top: 0.8em;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: var(--gray);
 }   
 .usda_view_project {
     font-size: 1em;
@@ -248,7 +254,7 @@ nav {
     margin-right: 30px;
 }
 .usda_overlay:hover {
-    opacity: .88;
+    opacity: .9;
     transition: opacity 0.3s ease-in;
 }
 .usda_overlay::after {
@@ -259,10 +265,10 @@ nav {
     width: 100%;
     height: 4px;
     background: var(--usda);
-    opacity: 0.7;
+    opacity: 0.8;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.6s ease-in;
+    transition: transform 0.5s ease-in;
 }
 .usda_overlay:hover::after {
     transform: scaleX(1);
@@ -317,16 +323,16 @@ nav {
 
 /*--------RESPONSIVE LAYOUT--------*/
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width: 1100px) {
     .nav-container {
         width: 33%;
     }
     .grid {
-        margin-top: 40px;
+        margin-top: 78px;
         display: grid;
-        grid-template-columns: auto 36% 36% auto;
+        grid-template-columns: auto 35% 35% auto;
         grid-template-rows: 1fr 1fr 1fr 4%;
-        grid-gap: 30px;
+        grid-gap: 48px;
     }
     .retriever_gallery {
         grid-column: 2 / 3;
@@ -356,6 +362,15 @@ nav {
         grid-column: 2 / 4;
         grid-row: 4;
     }
+    .retriever_overlay, .usda_overlay{
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .nav-container {
+        width: 40%;
+    }
+
 }
 
 @media screen and (max-width:900px){
@@ -371,7 +386,7 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 33%;
+        width: 40%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -383,47 +398,63 @@ nav {
         display: block;
         cursor: pointer;
     }
+    .retriever_overlay, .usda_overlay{
+        padding-top: 5px;
+    }
 }
 
-@media screen and (max-width:740px){
+@media screen and (max-width:780px){
+    .retriever_overlay, .usda_overlay{
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width:720px){
     .grid {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: auto 70% auto;
+        grid-template-columns: auto 58% auto;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2%;
         z-index: -1px;
     }
     .retriever_gallery {
         grid-column: 2;
-        width: 90%
+        width: 100%
     }
     .sports_gallery {
         grid-column: 2;
-        width: 90%
+        width: 100%
     }
     .hotel_fullerton_gallery {
         grid-column: 2;
-        width: 90%
+        width: 100%
     }
     .USDA_gallery {
         grid-column: 2;
-        width: 90%
+        width: 100%
     }
     .mom_gallery {
         grid-column: 2;
-        width: 90%
+        width: 100%
     }
     .hearts_bones_gallery {
         grid-column: 2;
-        width: 90%
+        width: 100%
     }
     .footer {
         grid-column: 2 / 3;
         grid-row: 7;
     }
+    .retriever_overlay, .usda_overlay{
+        padding-top: 80px;
+    }
 }
 
-
+@media screen and (max-width:500px){
+    .retriever_overlay, .usda_overlay {
+        padding-top: 10px;
+    }
+}
 
 /*--------MENU ANIMATION--------*/
 
@@ -460,7 +491,7 @@ nav {
 
 .preloader {
     align-items: center;
-    background:var(--slate);
+    background:var(--preloaderbg);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -468,7 +499,7 @@ nav {
     position: fixed;
     top: 0;
     transition: opacity 1s linear;
-    transition: opacity 1.4s linear;
+    transition: opacity 1s linear;
     width: 100%;
     z-index: 9999;
     pointer-events: none;
