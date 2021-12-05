@@ -201,12 +201,12 @@ nav {
 }
 
 /*--------PROJECT TITLE--------*/
-.img_heading{
+.img_heading {
     display: grid;
     grid-column: 2;
     width: 75%;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 
