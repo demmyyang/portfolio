@@ -27,7 +27,7 @@ const preloader = document.querySelector('.preloader');
 function fadeEffect() {
     setInterval(() => {
         // Set opacity to 1 explicitly to start animation
-        if (!preloader.style.opacity) {
+        if (!preloader.style || !preloader.style.opacity) {
             preloader.style.opacity = 1;
             return;
         }
