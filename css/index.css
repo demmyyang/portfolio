@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-container {
-    display: flex;
+    display: none;
     background-color: var(--background);
     justify-content: space-around;
     width: 30%;
@@ -646,7 +646,7 @@ nav {
 
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
     body {
         overflow-x: hidden;
     }
@@ -655,8 +655,6 @@ nav {
         right: 0px;
         height: 18vh;
         top: 8vh;
-        background-color: var(--background);
-        display: flex;
         flex-direction: column;
         align-items: center;
         width: 40%;
@@ -732,6 +730,7 @@ nav {
 /*--------MENU ANIMATION--------*/
 
 .nav-active {
+    display: flex;
     transform: translateX(0%);
 }
 
