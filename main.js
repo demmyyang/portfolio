@@ -24,17 +24,32 @@ navSlide();
 
 const preloader = document.querySelector('.preloader');
 
-const fadeEffect = setInterval(() => {
-    if (!preloader.style.opacity) {
-        preloader.style.opacity = 1;
-    }
-    if (preloader.style.opacity > 0) {
-        preloader.style.opacity -= 0.1;
-    } else {
-        clearInterval(fadeEffect);
-    }
-}, 100);
+function fadeEffect() {
+    setInterval(() => {
+        // Set opacity to 1 explicitly to start animation
+        if (!preloader.style.opacity) {
+            preloader.style.opacity = 1;
+            return;
+        }
 
-window.addEventListener('load', fadeEffect);
+        // Decrease opacity if not yet zero
+        if (preloader.style.opacity > 0) {
+            preloader.style.opacity = Math.max(0, preloader.style.opacity - 0.07);
+            return;
+        }
+
+        // Stop animation
+        clearInterval(fadeEffect);
+    }, 100);
+}
+
+// Immediatly hide preloader for mobile browsers
+console.log();
+if (document.body.scrollWidth < 800) {
+    preloader.style.opacity = 0;
+} else {
+    window.addEventListener('load', fadeEffect);
+}
+
 
 
