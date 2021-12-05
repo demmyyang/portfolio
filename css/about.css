@@ -2,11 +2,11 @@
     margin: 0px auto;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #E0E0E0;
+    background-color: #eeeeee;
 }
 
 :root {
-    --background: #E0E0E0;
+    --background: #Eeeeee;
     --black: #000000;
 }
 
@@ -17,7 +17,7 @@ nav {
     min-height: 8vh;
     font-family: "Work Sans", sans-serif;
     background-color: var(--background);
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .logo {
@@ -25,6 +25,11 @@ nav {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--slate);
 }
 
 .nav-container {

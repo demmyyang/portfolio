@@ -2,16 +2,20 @@
     margin: 0px auto;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #E0E0E0;
+    background-color: var(--background);
 }
 
 :root {
-    --background: #E0E0E0;
+    --background: #Eeeeee;
     --slate: #2b2b2b;
     --retriever: #e9635c;
     --usda: #fa6000;
     --gray: #424242;
     --preloaderbg: #191919;
+    --sportally: #31c235;
+    --hotelfullerton: #cbab7a;
+    --overit: #f42158;
+    --heartsbones: #fcd16b;
 }
 
 
@@ -24,7 +28,7 @@ nav {
     min-height: 8vh;
     font-family: "Work Sans", sans-serif;
     background-color: var(--background);
-    margin-top: 8px;
+    margin-top: 10px;
     z-index: 999;
 }
 
@@ -33,6 +37,11 @@ nav {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--slate);
 }
 
 .nav-container {
@@ -115,17 +124,161 @@ nav {
 }
 
 .grid {
-    margin-top: 88px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: auto 24% 24% 24% auto;
     grid-template-rows: 1fr 1fr 6%;
     grid-gap: 33px;
+    row-gap: 40px;
+}
+
+
+/*--------SPORTS GRID--------*/
+
+.sports_gallery {
+    grid-column: 2 / 3;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.sports_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.sports_title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.sports_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.sports_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.sports_overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--sportally);
+    opacity: 0.5;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.sports_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*--------HOTEL FULLERTON GRID--------*/
+
+
+.hotel_fullerton_gallery {
+    grid-column: 3 / 4;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.hotelfullerton_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.hotelfullerton_title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hotelfullerton_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hotelfullerton_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.hotelfullerton_overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--hotelfullerton);
+    opacity: 0.5;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.hotelfullerton_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /*--------RETRIEVER GRID--------*/
 
 .retriever_gallery {
-    grid-column: 2 / 3;
+    grid-column: 4 / 5;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -152,25 +305,25 @@ nav {
     font-weight: bold;
     margin-top: 3.7em;
     padding-top: 30px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 .retriever_description {
     font-size: 0.9em;
     margin-top: 0.8em;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
     color: var(--gray);
 }   
 .view_project {
     font-size: 1em;
     font-weight: bold;
     margin-top: 1.2em;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 .retriever_overlay:hover {
-    opacity: .9;
+    opacity: .97;
     transition: opacity 0.3s ease-in;
 }
 .retriever_overlay::after {
@@ -181,7 +334,7 @@ nav {
     width: 100%;
     height: 4px;
     background: var(--retriever);
-    opacity: 0.7;
+    opacity: 0.5;
 
     transform: scaleX(0);
     transform-origin: right;
@@ -192,24 +345,153 @@ nav {
     transform-origin: left;
 }
 
-/*--------SPORTS GRID--------*/
 
-.sports_gallery {
+/*--------OVER-IT GRID--------*/
+
+.overit_gallery {
+    grid-column: 2 / 3;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.overit_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.overit_title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.overit_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.overit_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.overit_overlay::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--overit);
+    opacity: 0.5;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.overit_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+/*--------HEARTS/BONES GRID--------*/
+
+
+.hearts_bones_gallery {
     grid-column: 3 / 4;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.hearts_bones_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.hearts_bones_title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hearts_bones_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hearts_bones_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.hearts_bones_overlay::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
     width: 100%;
+    height: 4px;
+    background: var(--heartsbones);
+    opacity: 0.9;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.hearts_bones_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
-/*--------HOTEL FULLERTON GRID--------*/
-
-.hotel_fullerton_gallery {
-    grid-column: 4 / 5;
-    width: 100%;
-}
 
 /*--------USDA GRID--------*/
 
 .USDA_gallery {
-    grid-column: 2 / 3;
+    grid-column: 4 / 5;
     width:100%;
     align-items: center;
     justify-content: center;
@@ -236,25 +518,25 @@ nav {
     font-weight: bold;
     margin-top: 3.7em;
     padding-top: 30px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 .usda_description {
     font-size: 0.9em;
     margin-top: 0.8em;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 35px;
+    margin-right: 35px;
     color: var(--gray);
 }   
 .usda_view_project {
     font-size: 1em;
     font-weight: bold;
     margin-top: 1.2em;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 .usda_overlay:hover {
-    opacity: .9;
+    opacity: .97;
     transition: opacity 0.3s ease-in;
 }
 .usda_overlay::after {
@@ -265,7 +547,7 @@ nav {
     width: 100%;
     height: 4px;
     background: var(--usda);
-    opacity: 0.8;
+    opacity: 0.5;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s ease-in;
@@ -275,19 +557,6 @@ nav {
     transform-origin: left;
 }
 
-/*--------M.O.M. GRID--------*/
-
-.mom_gallery {
-    grid-column: 3 / 4;
-    width: 100%;
-}
-
-/*--------HEARTS/BONES GRID--------*/
-
-.hearts_bones_gallery {
-    grid-column: 4 / 5;
-    width: 100%;
-}
 
 /*--------FOOTER GRID--------*/
 
@@ -307,13 +576,13 @@ nav {
 
 /*--------GRID HOVER EFFECTS--------*/
 
-.gallery_img:hover, .retriever_gallery:hover, .sports_gallery:hover,.hotel_fullerton_gallery:hover, .USDA_gallery:hover, .mom_gallery:hover, .hearts_bones_gallery:hover{
-    transform: translateY(-10px);
+.gallery_img:hover, .retriever_gallery:hover, .sports_gallery:hover,.hotel_fullerton_gallery:hover, .USDA_gallery:hover, .overit_gallery:hover, .hearts_bones_gallery:hover{
+    transform: translateY(-20px);
     transition: transform 0.2s ease-in;
 }
 
 .gallery_img:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     transition: transform 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
@@ -334,15 +603,23 @@ nav {
         grid-template-rows: 1fr 1fr 1fr 4%;
         grid-gap: 48px;
     }
+    .sports_gallery {
+        grid-column: 2 / 3;
+        width: 100%;
+    }
+    .hotel_fullerton_gallery {
+        grid-column: 3 / 4;
+        width: 100%;
+    }
     .retriever_gallery {
         grid-column: 2 / 3;
         width: 100%;
     }
-    .sports_gallery {
+    .overit_gallery {
         grid-column: 3 / 4;
         width: 100%;
     }
-    .hotel_fullerton_gallery {
+    .hearts_bones_gallery {
         grid-column: 2 / 3;
         width: 100%;
     }
@@ -350,14 +627,7 @@ nav {
         grid-column: 3 / 4;
         width: 100%;
     }
-    .mom_gallery {
-        grid-column: 2 / 3;
-        width: 100%;
-    }
-    .hearts_bones_gallery {
-        grid-column: 3 / 4;
-        width: 100%;
-    }
+    
     .footer {
         grid-column: 2 / 4;
         grid-row: 4;
@@ -411,9 +681,9 @@ nav {
 
 @media screen and (max-width:720px){
     .grid {
-        margin-top: 50px;
+        margin-top: 30px;
         display: grid;
-        grid-template-columns: auto 58% auto;
+        grid-template-columns: auto 62% auto;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2%;
         z-index: -1px;
     }
@@ -433,7 +703,7 @@ nav {
         grid-column: 2;
         width: 100%
     }
-    .mom_gallery {
+    .overit_gallery {
         grid-column: 2;
         width: 100%
     }

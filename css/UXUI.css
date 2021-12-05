@@ -2,13 +2,24 @@
     margin: 0px auto;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #E0E0E0;
+    background-color: var(--background);
 }
 
 :root {
-    --background: #E0E0E0;
-    --black: #000000;
+    --background: #Eeeeee;
+    --slate: #2b2b2b;
+    --retriever: #e9635c;
+    --usda: #fa6000;
+    --gray: #424242;
+    --preloaderbg: #191919;
+    --sportally: #31c235;
+    --hotelfullerton: #cbab7a;
+    --overit: #f42158;
+    --heartsbones: #fcd16b;
 }
+
+
+/*--------HEADER--------*/
 
 nav {
     display: flex;
@@ -17,14 +28,20 @@ nav {
     min-height: 8vh;
     font-family: "Work Sans", sans-serif;
     background-color: var(--background);
-    margin-top: 8px;
+    margin-top: 10px;
+    z-index: 999;
 }
 
 .logo {
-    color: black;
+    color:var(--slate);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--slate);
 }
 
 .nav-container {
@@ -43,7 +60,7 @@ nav {
 }
 
 .nav-container a {
-    color: black;
+    color: var(--slate);
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -55,8 +72,10 @@ nav {
     padding-left: 3px;
     padding-right: 0px;
     padding-bottom: 1px;
-    margin-top: 10px;
+    margin-top: 14px;
 }
+
+/*--------HEADER (HOVER EFFECTS)--------*/
 
 .nav-links::after {
     content: "";
@@ -65,7 +84,7 @@ nav {
     bottom: 0;
     width: 100%;
     height: 1px;
-    background: black;
+    background:var(--slate);
 
     transform: scaleX(0);
     transform-origin: right;
@@ -81,6 +100,7 @@ nav {
     font-weight: bold;
 }
 
+/*--------BURGER 1024-----*/
 
 .burger {
     display: none;
@@ -89,11 +109,533 @@ nav {
 .burger div {
     width: 26px;
     height: 2px;
-    background-color: var(--black);
+    background-color: var(--slate);
     margin: 5px;
     transition: all 0.3s ease;
 }
 
+
+
+/*--------GRID LAYOUT--------*/
+
+.gallery_img {
+    width: 100%;
+    border-radius: 1px; 
+}
+
+.grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto 24% 24% 24% auto;
+    grid-template-rows: 1fr 1fr 6%;
+    grid-gap: 33px;
+    row-gap: 40px;
+}
+
+
+/*--------SPORTS GRID--------*/
+
+.sports_gallery {
+    grid-column: 2 / 3;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.sports_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.sports_title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.sports_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.sports_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.sports_overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--sportally);
+    opacity: 0.5;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.sports_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*--------HOTEL FULLERTON GRID--------*/
+
+
+.hotel_fullerton_gallery {
+    grid-column: 3 / 4;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.hotelfullerton_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.hotelfullerton_title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hotelfullerton_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hotelfullerton_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.hotelfullerton_overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--hotelfullerton);
+    opacity: 0.5;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.hotelfullerton_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/*--------RETRIEVER GRID--------*/
+
+.retriever_gallery {
+    grid-column: 4 / 5;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.retriever_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.retriever_title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.retriever_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.retriever_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.retriever_overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--retriever);
+    opacity: 0.5;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.retriever_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*--------OVER-IT GRID--------*/
+
+.overit_gallery {
+    grid-column: 2 / 3;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.overit_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.overit_title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.overit_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.overit_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.overit_overlay::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--overit);
+    opacity: 0.5;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.overit_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+/*--------HEARTS/BONES GRID--------*/
+
+
+.hearts_bones_gallery {
+    grid-column: 3 / 4;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.hearts_bones_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.hearts_bones_title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hearts_bones_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.hearts_bones_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.hearts_bones_overlay::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--heartsbones);
+    opacity: 0.9;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.hearts_bones_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*--------USDA GRID--------*/
+
+.USDA_gallery {
+    grid-column: 4 / 5;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    background: rgba(224,224,224,.6);
+}
+.usda_overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: var(--slate);
+    font-family: "Work sans", sans-serif;
+    display: inline-block;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.usda_title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 3.7em;
+    padding-top: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.usda_description {
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: var(--gray);
+}   
+.usda_view_project {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.2em;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.usda_overlay:hover {
+    opacity: .97;
+    transition: opacity 0.3s ease-in;
+}
+.usda_overlay::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--usda);
+    opacity: 0.5;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+.usda_overlay:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/*--------FOOTER GRID--------*/
+
+.footer {
+    grid-column: 2 / 5;
+    grid-row: 3;
+}
+
+.footer {
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 1px;
+}
+
+/*--------GRID HOVER EFFECTS--------*/
+
+.gallery_img:hover, .retriever_gallery:hover, .sports_gallery:hover,.hotel_fullerton_gallery:hover, .USDA_gallery:hover, .overit_gallery:hover, .hearts_bones_gallery:hover{
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-in;
+}
+
+.gallery_img:hover {
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+/*--------RESPONSIVE LAYOUT--------*/
+
+@media screen and (max-width: 1100px) {
+    .nav-container {
+        width: 33%;
+    }
+    .grid {
+        margin-top: 78px;
+        display: grid;
+        grid-template-columns: auto 35% 35% auto;
+        grid-template-rows: 1fr 1fr 1fr 4%;
+        grid-gap: 48px;
+    }
+    .sports_gallery {
+        grid-column: 2 / 3;
+        width: 100%;
+    }
+    .hotel_fullerton_gallery {
+        grid-column: 3 / 4;
+        width: 100%;
+    }
+    .retriever_gallery {
+        grid-column: 2 / 3;
+        width: 100%;
+    }
+    .overit_gallery {
+        grid-column: 3 / 4;
+        width: 100%;
+    }
+    .hearts_bones_gallery {
+        grid-column: 2 / 3;
+        width: 100%;
+    }
+    .USDA_gallery {
+        grid-column: 3 / 4;
+        width: 100%;
+    }
+    
+    .footer {
+        grid-column: 2 / 4;
+        grid-row: 4;
+    }
+    .retriever_overlay, .usda_overlay{
+        padding-top: 50px;
+    }
+}
 @media screen and (max-width:1200px) {
     .nav-container {
         width: 40%;
@@ -120,12 +662,71 @@ nav {
     }
     .nav-container li {
         opacity: 0;
+        z-index: 9999px;
     }
     .burger {
         display: block;
         cursor: pointer;
     }
+    .retriever_overlay, .usda_overlay{
+        padding-top: 5px;
+    }
 }
+
+@media screen and (max-width:780px){
+    .retriever_overlay, .usda_overlay{
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width:720px){
+    .grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: auto 62% auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2%;
+        z-index: -1px;
+    }
+    .retriever_gallery {
+        grid-column: 2;
+        width: 100%
+    }
+    .sports_gallery {
+        grid-column: 2;
+        width: 100%
+    }
+    .hotel_fullerton_gallery {
+        grid-column: 2;
+        width: 100%
+    }
+    .USDA_gallery {
+        grid-column: 2;
+        width: 100%
+    }
+    .overit_gallery {
+        grid-column: 2;
+        width: 100%
+    }
+    .hearts_bones_gallery {
+        grid-column: 2;
+        width: 100%
+    }
+    .footer {
+        grid-column: 2 / 3;
+        grid-row: 7;
+    }
+    .retriever_overlay, .usda_overlay{
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .retriever_overlay, .usda_overlay {
+        padding-top: 10px;
+    }
+}
+
+/*--------MENU ANIMATION--------*/
 
 .nav-active {
     transform: translateX(0%);
@@ -142,6 +743,8 @@ nav {
     }
 }
 
+
+
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,5px);
 }
@@ -150,4 +753,24 @@ nav {
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-5px);
+}
+
+
+
+/*--------PRELOADER--------*/
+
+.preloader {
+    align-items: center;
+    background:var(--preloaderbg);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1s linear;
+    transition: opacity 1s linear;
+    width: 100%;
+    z-index: 9999;
+    pointer-events: none;
 }
