@@ -43,10 +43,12 @@ function fadeEffect() {
     }, 100);
 }
 
-// Immediatly hide preloader for mobile browsers\
-if (document.body.scrollWidth < 800) {
+// Immediatly hide preloader for mobile browsers
+const hasPreloaded = window.sessionStorage.getItem('shownPreload');
+if (document.body.scrollWidth < 800 || hasPreloaded !== null) {
     preloader.style.opacity = 0;
 } else {
+    window.sessionStorage.setItem('shownPreload', true);
     window.addEventListener('load', fadeEffect);
 }
 
