@@ -6,7 +6,7 @@
 }
 
 :root {
-    --background: #Eeeeee;
+    --background: #eeeeee;
     --slate: #2b2b2b;
     --retriever: #e9635c;
     --usda: #fa6000;
@@ -16,105 +16,12 @@
     --hotelfullerton: #cbab7a;
     --overit: #f42158;
     --heartsbones: #fcd16b;
+    --slate: #2b2b2b;
+    --links: black;
+    --description: #4c4c4c;
+    --pink: #56991c;
+    --paragraphs: #4f4f4f;
 }
-
-
-/*--------HEADER--------*/
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    font-family: "Work Sans", sans-serif;
-    background-color: var(--background);
-    margin-top: 10px;
-    z-index: 999;
-}
-
-.logo {
-    color:var(--slate);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 16px;
-}
-
-.logo a {
-    text-decoration: none;
-    color: var(--slate);
-}
-
-.nav-container {
-    display: flex;
-    background-color: var(--background);
-    justify-content: space-around;
-    width: 30%;
-    text-decoration: none;
-    opacity: 0.9;
-    margin-bottom: 12px;
-    z-index: 999;
-}
-
-.nav-container li {
-    list-style: none;
-}
-
-.nav-container a {
-    color: var(--slate);
-    text-decoration: none;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.nav-links {
-    position: relative;
-    padding-left: 3px;
-    padding-right: 0px;
-    padding-bottom: 1px;
-    margin-top: 14px;
-}
-
-/*--------HEADER (HOVER EFFECTS)--------*/
-
-.nav-links::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background:var(--slate);
-
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 250ms ease-in;
-}
-
-.nav-links:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.nav-links:hover{
-    font-weight: bold;
-}
-
-/*--------BURGER 1024-----*/
-
-.burger {
-    display: none;
-}
-
-.burger div {
-    width: 26px;
-    height: 2px;
-    background-color: var(--slate);
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-
 
 /*--------GRID LAYOUT--------*/
 
@@ -558,22 +465,6 @@ nav {
 }
 
 
-/*--------FOOTER GRID--------*/
-
-.footer {
-    grid-column: 2 / 5;
-    grid-row: 3;
-}
-
-.footer {
-    font-family: "Work Sans", sans-serif;
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    padding: 1px;
-}
-
 /*--------GRID HOVER EFFECTS--------*/
 
 .gallery_img:hover, .retriever_gallery:hover, .sports_gallery:hover,.hotel_fullerton_gallery:hover, .USDA_gallery:hover, .overit_gallery:hover, .hearts_bones_gallery:hover{
@@ -596,9 +487,6 @@ nav {
 /*--------RESPONSIVE LAYOUT--------*/
 
 @media screen and (max-width: 1100px) {
-    .nav-container {
-        width: 33%;
-    }
     .grid {
         margin-top: 78px;
         display: grid;
@@ -630,45 +518,14 @@ nav {
         grid-column: 3 / 4;
         width: 100%;
     }
-    
-    .footer {
-        grid-column: 2 / 4;
-        grid-row: 4;
-    }
     .retriever_overlay, .usda_overlay{
         padding-top: 50px;
     }
-}
-@media screen and (max-width:1200px) {
-    .nav-container {
-        width: 40%;
-    }
-
 }
 
 @media screen and (max-width:900px) {
     body {
         overflow-x: hidden;
-    }
-    .nav-container {
-        position: absolute;
-        right: 0px;
-        height: 18vh;
-        top: 8vh;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-        width: 40%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .nav-container li {
-        opacity: 0;
-        z-index: 9999px;
-    }
-    .burger {
-        display: block;
-        cursor: pointer;
     }
     .retriever_overlay, .usda_overlay{
         padding-top: 5px;
@@ -713,10 +570,6 @@ nav {
         grid-column: 2;
         width: 100%
     }
-    .footer {
-        grid-column: 2 / 3;
-        grid-row: 7;
-    }
     .retriever_overlay, .usda_overlay{
         padding-top: 80px;
     }
@@ -727,38 +580,6 @@ nav {
         padding-top: 10px;
     }
 }
-
-/*--------MENU ANIMATION--------*/
-
-.nav-active {
-    display: flex;
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,5px);
-}
-.toggle .line2{
-    opacity: 0;
-}
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-5px);
-}
-
-
 
 /*--------PRELOADER--------*/
 
@@ -774,4 +595,35 @@ nav {
     width: 100%;
     z-index: 9999;
     pointer-events: none;
+}
+
+@media screen and (max-width:720px) {
+    .footer {
+        grid-column: 2 / 3;
+        grid-row: 7;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footer {
+        grid-column: 2 / 4;
+        grid-row: 4;
+    }
+}
+
+
+/*--------FOOTER GRID--------*/
+
+.footer {
+    grid-column: 2 / 5;
+    grid-row: 3;
+}
+
+.footer {
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 1px;
 }
