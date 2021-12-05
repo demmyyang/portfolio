@@ -587,6 +587,9 @@ nav {
     transition: all 0.2s ease-in;
 }
 
+.gallery_text_png {
+    width: 100%;
+}
 
 
 
@@ -768,8 +771,6 @@ nav {
     left: 0;
     position: fixed;
     top: 0;
-    transition: opacity 1s linear;
-    transition: opacity 1s linear;
     width: 100%;
     z-index: 9999;
     pointer-events: none;
